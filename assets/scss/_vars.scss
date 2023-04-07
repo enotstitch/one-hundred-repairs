@@ -1,0 +1,12 @@
+// * Максимальная ширина макета
+$container-width: 1700;
+
+:root {
+	// * Colors
+	--black-color: #000;
+	--light-color: #fff;
+	--dark-color: #343434;
+	--bg-color: var(--light-color);
+	--accent-color: #23c7ef;
+	--grey-color: #5e5e5e;
+}

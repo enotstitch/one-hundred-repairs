@@ -1,3 +1,7 @@
+.section {
+	padding: 75px 0;
+}
+
 .title {
 	@include adaptive-font(40, 20);
 	margin: 0;
@@ -8,7 +12,7 @@
 }
 
 .text {
-	@include adaptive-font(16, 13);
+	@include adaptive-font(17, 15);
 	margin: 0;
 	font-weight: 400;
 	line-height: 31px;
@@ -79,7 +83,7 @@
 	}
 
 	&__text {
-		@include adaptive-font(10, 5);
+		@include adaptive-font(12, 11);
 		margin: 0;
 		line-height: 14px;
 		color: var(--grey-color);

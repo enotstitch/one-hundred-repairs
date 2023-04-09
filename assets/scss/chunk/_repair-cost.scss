@@ -2,6 +2,7 @@
 	&__wrap {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-around;
 		gap: 30px;
 	}
 }
@@ -16,11 +17,11 @@
 
 	&__img {
 		position: relative;
-		height: 100%;
 		max-width: 500px;
 	}
 
 	&__deadline {
+		@include adaptive-font(17, 14);
 		position: absolute;
 		left: 25px;
 		top: 25px;
@@ -28,6 +29,13 @@
 		padding: 13px 9px;
 		color: var(--light-color);
 		background-color: var(--accent-color);
+
+		@media (max-width: 576px) {
+			left: 50%;
+			top: 10px;
+			padding: 9px;
+			transform: translateX(-50%);
+		}
 	}
 
 	&__content {
@@ -65,15 +73,12 @@
 	}
 
 	&__text {
-		@include adaptive-font(17, 14);
-		margin: 0;
 		margin-bottom: 35px;
 		font-weight: 600;
-		line-height: 31px;
 	}
 
 	&__cost {
-		@include adaptive-font(23, 16);
+		@include adaptive-font(23, 18);
 		align-self: center;
 		margin-bottom: 17px;
 		line-height: 38px;
@@ -89,7 +94,9 @@
 
 	&__socials {
 		display: flex;
-		justify-content: space-between;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		gap: 15px;
 		margin-bottom: 35px;
 	}
 
@@ -103,7 +110,7 @@
 .repair-cost-card-social {
 	display: flex;
 	justify-content: center;
-	width: 25%;
+	width: 90px;
 
 	&__label {
 		display: flex;
@@ -125,8 +132,8 @@
 
 	&__icon {
 		margin-bottom: 10px;
-		width: 48px;
-		height: 50px;
+		width: fit-content;
+		height: 53px;
 	}
 
 	&__name {

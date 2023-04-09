@@ -3,11 +3,11 @@
 }
 
 .title {
-	@include adaptive-font(40, 20);
+	@include adaptive-font(40, 26);
 	margin: 0;
 	margin-bottom: 100px;
 	font-weight: 600;
-	line-height: 76px;
+	line-height: 40px;
 	text-align: center;
 }
 

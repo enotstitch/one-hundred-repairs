@@ -1,5 +1,36 @@
 .section {
 	padding: 75px 0;
+
+	&--decor {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: -180px;
+			top: -150px;
+			border-radius: 100%;
+			width: 400px;
+			height: 400px;
+			background: linear-gradient(
+				216.14deg,
+				rgb(35 199 239 / 55%) -1.7%,
+				rgb(35 199 239 / 43.5%) 32.82%,
+				rgb(35 199 239 / 0%) 92.31%
+			);
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: -180px;
+			bottom: -150px;
+			border-radius: 100%;
+			width: 400px;
+			height: 400px;
+			background: linear-gradient(180deg, rgb(35 199 239 / 55%) 0%, rgb(35 199 239 / 0%) 100%);
+		}
+	}
 }
 
 .title {

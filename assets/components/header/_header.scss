@@ -80,18 +80,17 @@
 	&__item {
 		display: flex;
 		flex-direction: column;
+		font-weight: 500;
 	}
 
 	&-item__phone {
-		font-weight: 500;
-		font-size: 20px;
-		line-height: 140%;
+		@include adaptive-font(18, 16);
+		margin-bottom: 5px;
 	}
 
-	&-item__modal-link {
-		font-weight: 500;
-		font-size: 12px;
-		line-height: 140%;
+	&-item__modal {
+		@include adaptive-font(13, 16);
+		width: fit-content;
 		color: var(--grey-color);
 	}
 }

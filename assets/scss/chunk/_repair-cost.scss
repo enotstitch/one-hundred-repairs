@@ -13,27 +13,23 @@
 	overflow: hidden;
 	border: 2px solid #5e5e5e8f;
 	border-radius: 15px;
-	max-width: 445px;
+	max-width: 355px;
 
 	&__img {
 		position: relative;
-		max-width: 500px;
 	}
 
 	&__deadline {
-		@include adaptive-font(17, 14);
+		@include adaptive-font(15, 14);
 		position: absolute;
 		left: 25px;
-		top: 25px;
+		top: 10px;
 		border-radius: 15px;
-		padding: 13px 9px;
+		padding: 9px;
 		color: var(--light-color);
 		background-color: var(--accent-color);
-
 		@media (max-width: 576px) {
 			left: 50%;
-			top: 10px;
-			padding: 9px;
 			transform: translateX(-50%);
 		}
 	}
@@ -41,16 +37,16 @@
 	&__content {
 		display: flex;
 		flex-direction: column;
-		padding: 25px;
+		padding: 20px;
+		height: 100%;
 	}
 
 	&__title {
-		@include adaptive-font(20, 18);
+		@include adaptive-font(19, 18);
 		position: relative;
 		margin: 0;
 		margin-bottom: 30px;
 		font-weight: 600;
-		line-height: 31px;
 
 		&::before {
 			content: '';
@@ -72,16 +68,24 @@
 		}
 	}
 
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: auto;
+	}
+
 	&__text {
-		margin-bottom: 35px;
-		font-weight: 600;
+		margin-bottom: 20px;
 	}
 
 	&__cost {
 		@include adaptive-font(23, 18);
+		display: inline-block;
 		align-self: center;
-		margin-bottom: 17px;
-		line-height: 38px;
+		margin-bottom: 10px;
+		line-height: 100%;
 
 		&--blue {
 			color: var(--accent-color);
@@ -110,7 +114,7 @@
 .repair-cost-card-social {
 	display: flex;
 	justify-content: center;
-	width: 90px;
+	width: 23%;
 
 	&__label {
 		display: flex;
@@ -132,12 +136,12 @@
 
 	&__icon {
 		margin-bottom: 10px;
-		width: fit-content;
-		height: 53px;
+		width: 35px;
+		height: 35px;
 	}
 
 	&__name {
-		@include adaptive-font(15, 11);
+		@include adaptive-font(13, 11);
 		font-weight: 300;
 		line-height: 150%;
 		text-align: center;

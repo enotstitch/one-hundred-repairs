@@ -12,19 +12,20 @@
 }
 
 .text {
-	@include adaptive-font(17, 15);
+	@include adaptive-font(16, 15);
 	margin: 0;
 	font-weight: 400;
-	line-height: 31px;
+	line-height: 145%;
 	color: var(--grey-color);
 }
 
 .link {
 	@include adaptive-font(20, 16);
+	display: inline-block;
 	border: 2px solid transparent;
 	border-radius: 15px;
 	padding: 12px 30px;
-	line-height: 150%;
+	line-height: 140%;
 	text-align: center;
 	color: var(--light-color);
 	background-color: var(--accent-color);

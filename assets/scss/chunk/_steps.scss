@@ -1,0 +1,87 @@
+.steps {
+	counter-reset: steps-count 0;
+	display: flex;
+	justify-content: center;
+	gap: 80px;
+
+	&__wrap {
+		max-width: fit-content;
+	}
+
+	&__circle {
+		counter-increment: steps-count;
+		position: relative;
+		margin-bottom: 50px;
+		border-radius: 100%;
+		width: 85px;
+		height: 85px;
+		background-color: var(--accent-color);
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 0;
+			border-left: 4px var(--accent-color) dashed;
+			height: 150px;
+			transform: translateX(-50%);
+		}
+
+		&::after {
+			content: counter(steps-count);
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 40px;
+			height: 40px;
+			font-size: 40px;
+			text-align: center;
+			color: var(--light-color);
+			transform: translate(-50%, -50%);
+		}
+
+		&:last-child {
+			margin: 0;
+
+			&::before {
+				height: 0;
+			}
+		}
+	}
+
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+
+.steps-card {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+
+	&__icon {
+		width: 60px;
+		height: 40px;
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		max-width: 450px;
+		gap: 10px;
+	}
+
+	&__title {
+		@include adaptive-font(24, 18);
+		margin: 0;
+		font-weight: 600;
+	}
+
+	&__descr {
+		@include adaptive-font(20, 16);
+		margin: 0;
+		line-height: 140%;
+	}
+}

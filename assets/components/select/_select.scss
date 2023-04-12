@@ -1,16 +1,18 @@
 .select {
 	position: relative;
 	margin: 0 auto;
-	width: 250px;
+	max-width: fit-content;
+	user-select: none;
 
 	&__header {
 		display: flex;
-		border: 1px solid #ccc;
+		align-items: center;
+		padding: 10px 0;
 		cursor: pointer;
+		gap: 10px;
 	}
 
 	&__current {
-		padding: 8px;
 		font-size: 18px;
 		line-height: 24px;
 	}
@@ -21,9 +23,16 @@
 		align-items: center;
 		justify-content: center;
 		margin-left: auto;
-		width: 40px;
-		height: 40px;
+		width: 7px;
+		height: 20px;
 		text-align: center;
+		transform: rotate(90deg);
+		transition: transform 0.3s;
+	}
+
+	&__arrow {
+		width: 7px;
+		height: 20px;
 	}
 
 	&__body {
@@ -31,23 +40,34 @@
 		left: 0;
 		right: 0;
 		top: 100%;
+		z-index: 5;
 		display: none;
-		border: 1px solid #ccc;
+		overflow: hidden;
 		border-top: 0;
+		border-radius: 15px;
+		box-shadow: 0 0 35px rgb(0 0 0 / 25%);
+		background-color: var(--light-color);
 	}
 
 	&__item {
-		padding: 8px;
+		padding: 10px 15px;
 		font-size: 16px;
 		line-height: 24px;
+		transition: all 0.1s;
 		cursor: pointer;
 	}
 
 	&__item:hover {
-		background-color: #f2f2f2;
+		color: var(--light-color);
+		background-color: var(--accent-color);
 	}
 
 	&.is-active .select__body {
 		display: block;
+		width: max-content;
+	}
+
+	&.is-active .select__icon {
+		transform: rotate(-90deg);
 	}
 }

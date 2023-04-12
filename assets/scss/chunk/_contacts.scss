@@ -1,19 +1,30 @@
 .contacts {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
+	gap: 20px;
 
 	&__wrap {
 		border: 1px solid var(--grey-color);
 		border-radius: 15px;
 		padding: 25px 35px;
 		background: var(--light-color);
+
+		@media (max-width: 576px) {
+			padding: 25px 20px;
+			width: 100%;
+		}
 	}
 
 	&__title {
 		@include adaptive-font(32, 24);
 		margin: 0;
 		margin-bottom: 50px;
+
+		@media (max-width: 576px) {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__link {
@@ -62,6 +73,10 @@
 		flex-direction: column;
 		gap: 5px;
 	}
+
+	@media (max-width: 576px) {
+		margin-bottom: 20px;
+	}
 }
 
 .phone {
@@ -76,4 +91,8 @@
 	border-radius: 15px;
 	width: 800px;
 	height: 500px;
+
+	@media (max-width: 576px) {
+		height: 300px;
+	}
 }

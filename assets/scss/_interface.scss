@@ -103,6 +103,40 @@
 }
 
 .form {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	border: 2px solid #5e5e5e8f;
+	border-radius: 15px;
+	padding: 20px;
+	max-width: 355px;
+
+	&__title {
+		@include adaptive-font(19, 18);
+		position: relative;
+		margin: 0;
+		margin-bottom: 30px;
+		font-weight: 600;
+	}
+
+	&__descr {
+		margin-bottom: 20px;
+	}
+
+	&__socials {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		gap: 7px;
+		margin-bottom: 35px;
+	}
+
+	&__social {
+		display: flex;
+		justify-content: center;
+		width: 23%;
+	}
+
 	&__inputs {
 		display: flex;
 		flex-direction: column;
@@ -163,4 +197,42 @@
 			}
 		}
 	}
+}
+
+.form-social {
+	&__label {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		overflow: hidden;
+		border: 1px solid transparent;
+		border-radius: 15px;
+		padding: 7px;
+		width: 100%;
+		transition: border 0.1s;
+		cursor: pointer;
+		user-select: none;
+
+		&:hover {
+			border: 1px solid var(--dark-opacity-color);
+		}
+	}
+
+	&__icon {
+		margin-bottom: 10px;
+		width: 35px;
+		height: 35px;
+	}
+
+	&__name {
+		@include adaptive-font(13, 11);
+		font-weight: 300;
+		line-height: 150%;
+		text-align: center;
+		color: var(--grey-color);
+	}
+}
+
+.form-social input[type='radio']:checked + label {
+	border: 1px solid var(--grey-color);
 }

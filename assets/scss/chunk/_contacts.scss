@@ -30,7 +30,8 @@
 	gap: 20px;
 
 	&__icon {
-		width: 45px;
+		flex-shrink: 0;
+		width: 30px;
 		height: 30px;
 	}
 
@@ -51,8 +52,9 @@
 	gap: 20px;
 
 	&__icon {
-		width: 25px;
-		height: 35px;
+		flex-shrink: 0;
+		width: 30px;
+		height: 30px;
 	}
 
 	&__inner {

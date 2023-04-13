@@ -17,22 +17,15 @@
 		line-height: 24px;
 	}
 
-	&__icon {
-		display: flex;
-		flex-shrink: 0;
-		align-items: center;
-		justify-content: center;
-		margin-left: auto;
-		width: 7px;
+	&__geo {
+		width: 20px;
 		height: 20px;
-		text-align: center;
-		transform: rotate(90deg);
-		transition: transform 0.3s;
 	}
 
 	&__arrow {
 		width: 7px;
 		height: 20px;
+		transform: rotate(90deg);
 	}
 
 	&__body {

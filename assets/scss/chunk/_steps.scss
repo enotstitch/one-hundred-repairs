@@ -81,12 +81,20 @@
 		align-items: center;
 		gap: 30px;
 		align-self: flex-start;
+
+		@media (max-width: 480px) {
+			align-self: center;
+			text-align: center;
+		}
 	}
 
 	&__icon {
 		flex-shrink: 0;
 		width: 60px;
 		height: 60px;
+		@media (max-width: 480px) {
+			display: none;
+		}
 	}
 
 	&__text {
@@ -94,6 +102,10 @@
 		flex-direction: column;
 		max-width: 450px;
 		gap: 10px;
+
+		@media (max-width: 1200px) {
+			max-width: 100%;
+		}
 	}
 
 	&__title {

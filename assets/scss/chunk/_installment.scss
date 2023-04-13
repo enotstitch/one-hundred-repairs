@@ -1,6 +1,10 @@
 .installment {
 	&__wrap {
 		padding: 120px 0;
+
+		@media (max-width: 576px) {
+			padding: 0;
+		}
 	}
 }
 
@@ -70,6 +74,10 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
+
+		@media (max-width: 576px) {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__circle {
@@ -110,5 +118,12 @@
 		display: block;
 		margin: 0 auto;
 		max-width: fit-content;
+	}
+
+	@media (max-width: 992px) {
+		&::after,
+		&::before {
+			display: none;
+		}
 	}
 }

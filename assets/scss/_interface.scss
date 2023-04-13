@@ -5,6 +5,13 @@
 		background-image: url('@img/hero/hero-bg.jpg');
 	}
 
+	&-foreman {
+		background-image: url('@img/foreman/foreman-bg.jpg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
 	&--decor {
 		position: relative;
 
@@ -131,6 +138,11 @@
 
 	&__descr {
 		margin-bottom: 20px;
+
+		&--blue {
+			@include adaptive-font(19, 18);
+			color: var(--accent-color);
+		}
 	}
 
 	&__socials {
@@ -206,6 +218,10 @@
 				color: var(--dark-color);
 			}
 		}
+	}
+
+	&--white {
+		background-color: var(--light-color);
 	}
 }
 

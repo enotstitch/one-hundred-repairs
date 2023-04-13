@@ -2,17 +2,25 @@
 	counter-reset: steps-count 0;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: end;
 	gap: 80px;
 
-	&__wrap {
-		max-width: fit-content;
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		width: 55%;
 	}
+}
+
+.steps-card {
+	display: flex;
+	align-items: center;
+	gap: 80px;
+	margin-bottom: 50px;
 
 	&__circle {
 		counter-increment: steps-count;
 		position: relative;
-		margin-bottom: 50px;
 		border-radius: 100%;
 		width: 85px;
 		height: 85px;
@@ -24,7 +32,7 @@
 			left: 50%;
 			top: 0;
 			border-left: 4px var(--accent-color) dashed;
-			height: 150px;
+			height: 180px;
 			transform: translateX(-50%);
 		}
 
@@ -40,27 +48,13 @@
 			color: var(--light-color);
 			transform: translate(-50%, -50%);
 		}
-
-		&:last-child {
-			margin: 0;
-
-			&::before {
-				height: 0;
-			}
-		}
 	}
 
-	&__cards {
+	&__content {
 		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+		align-items: center;
+		gap: 30px;
 	}
-}
-
-.steps-card {
-	display: flex;
-	align-items: center;
-	gap: 30px;
 
 	&__icon {
 		flex-shrink: 0;
@@ -85,5 +79,13 @@
 		@include adaptive-font(20, 16);
 		margin: 0;
 		line-height: 140%;
+	}
+
+	&:last-child {
+		.steps-card__circle {
+			&::before {
+				height: 0;
+			}
+		}
 	}
 }

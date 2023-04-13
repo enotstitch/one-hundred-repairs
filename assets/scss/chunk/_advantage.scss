@@ -2,7 +2,7 @@
 	&__wrap {
 		display: flex;
 		flex-wrap: wrap;
-		align-items: center;
+		align-items: stretch;
 		justify-content: center;
 		gap: 50px 100px;
 
@@ -26,6 +26,10 @@
 		flex-shrink: 0;
 		width: 80px;
 		height: 80px;
+
+		use {
+			fill: var(--accent-color);
+		}
 	}
 
 	&__text {

@@ -18,6 +18,11 @@
 		margin-bottom: 20px;
 		width: 100px;
 		height: 100px;
+
+		use {
+			fill: var(--accent-color);
+		}
+
 		@media (max-width: 768px) {
 			width: 70px;
 			height: 70px;

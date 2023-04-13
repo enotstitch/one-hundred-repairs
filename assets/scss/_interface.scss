@@ -75,7 +75,7 @@
 }
 
 .link {
-	@include adaptive-font(20, 16);
+	@include adaptive-font(20, 14);
 	display: inline-block;
 	border: 2px solid transparent;
 	border-radius: 15px;
@@ -102,6 +102,13 @@
 			color: var(--light-color);
 			background-color: var(--accent-color);
 		}
+	}
+
+	@media (max-width: 1200px) {
+		padding: 10px 20px;
+	}
+	@media (max-width: 576px) {
+		padding: 10px 15px;
 	}
 }
 

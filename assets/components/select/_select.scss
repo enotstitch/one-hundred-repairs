@@ -13,6 +13,7 @@
 	}
 
 	&__current {
+		width: min-content;
 		font-size: 18px;
 		line-height: 24px;
 	}
@@ -62,5 +63,9 @@
 
 	&.is-active .select__icon {
 		transform: rotate(-90deg);
+	}
+
+	@media (max-width: 992px) {
+		display: none;
 	}
 }

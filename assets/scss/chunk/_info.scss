@@ -11,7 +11,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	max-width: 400px;
+	max-width: 370px;
 
 	&__icon {
 		flex-shrink: 0;
@@ -30,7 +30,7 @@
 	}
 
 	&__title {
-		@include adaptive-font(22, 18);
+		@include adaptive-font(19, 16);
 		margin: 0;
 		margin-bottom: 15px;
 		font-weight: 500;
@@ -40,11 +40,10 @@
 	}
 
 	&__descr {
-		@include adaptive-font(18, 16);
 		margin: 0;
 		font-weight: 400;
 		line-height: 140%;
 		text-align: center;
-		color: var(--gray-color);
+		color: var(--grey-color);
 	}
 }

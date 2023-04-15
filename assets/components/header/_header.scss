@@ -136,12 +136,11 @@
 	}
 
 	&-item__phone {
-		@include adaptive-font(18, 16);
 		margin-bottom: 5px;
 	}
 
 	&-item__modal {
-		@include adaptive-font(13, 16);
+		@include adaptive-font(14, 16);
 		width: fit-content;
 		color: var(--grey-color);
 
@@ -169,17 +168,13 @@
 	&__list {
 		flex-wrap: wrap;
 		justify-content: space-between;
-		gap: 10px 30px;
 
 		@media (max-width: 1200px) {
-			justify-content: center;
 			gap: 10px 20px;
 		}
 	}
 
 	&__link {
-		@include adaptive-font(18, 16);
-		color: var(--dark-color);
 		transition: color 0.2s;
 
 		&:hover {

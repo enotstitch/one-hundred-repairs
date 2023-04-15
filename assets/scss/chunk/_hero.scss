@@ -1,40 +1,42 @@
 .hero {
 	display: flex;
-	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
-	padding: 60px 0;
 	color: var(--light-color);
 	gap: 20px;
 
 	&__card {
 		border-radius: 15px;
 		padding: 40px 65px;
-		max-width: 775px;
+		max-width: 700px;
 		background: rgb(0 0 0 / 15%);
 		backdrop-filter: blur(3.5px);
 		@media (max-width: 576px) {
-			padding: 25px 40px;
+			padding: 25px 20px;
 		}
 	}
 
 	&__title {
-		@include adaptive-font(45, 25);
+		@include adaptive-font(38, 25);
 		margin: 0;
-		margin-bottom: 50px;
+		margin-bottom: 20px;
 		font-weight: 700;
-		line-height: 145%;
+		line-height: 140%;
 		text-align: left;
 		@media (max-width: 576px) {
 			margin-bottom: 15px;
 			text-align: center;
+		}
+
+		@media (max-width: 992px) {
+			line-height: 115%;
 		}
 	}
 
 	&__text {
 		@include adaptive-font(18, 16);
 		margin: 0;
-		margin-bottom: 75px;
+		margin-bottom: 60px;
 		line-height: 140%;
 		@media (max-width: 576px) {
 			margin-bottom: 50px;
@@ -44,8 +46,9 @@
 
 	&__links {
 		display: flex;
+		align-items: stretch;
 		gap: 25px;
-		@media (max-width: 768px) {
+		@media (max-width: 1200px) {
 			flex-direction: column;
 			gap: 15px;
 		}
@@ -62,6 +65,7 @@
 
 	&__calculator {
 		display: flex;
+		flex-shrink: 0;
 		align-items: center;
 		justify-content: center;
 		border-radius: 15px;
@@ -70,7 +74,7 @@
 		background-color: var(--dark-blue-color);
 	}
 
-	@media (max-width: 1280px) {
-		justify-content: center;
+	@media (max-width: 992px) {
+		flex-direction: column;
 	}
 }

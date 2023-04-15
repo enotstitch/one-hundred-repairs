@@ -1,0 +1,30 @@
+.turnkey {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: 20px;
+
+	&__texts {
+		max-width: 600px;
+	}
+
+	&__text {
+		margin: 0;
+		margin-bottom: 40px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__img {
+		overflow: hidden;
+		border-radius: 15px;
+		height: auto;
+		max-width: 300px;
+
+		@media (max-width: 992px) {
+			display: none;
+		}
+	}
+}

@@ -6,9 +6,9 @@
 	gap: 20px;
 
 	&__card {
-		border: 1px solid var(--grey-color);
 		border-radius: 15px;
 		padding: 20px 25px;
+		box-shadow: 0 0 10px rgb(0 0 0 / 25%);
 		background: var(--light-color);
 
 		@media (max-width: 576px) {
@@ -86,10 +86,10 @@
 
 .map {
 	overflow: hidden;
-	border: 1px solid #5e5e5e;
 	border-radius: 15px;
 	width: 800px;
 	height: 500px;
+	box-shadow: 0 0 10px rgb(0 0 0 / 25%);
 
 	@media (max-width: 576px) {
 		height: 300px;

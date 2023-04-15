@@ -5,22 +5,23 @@
 	justify-content: center;
 	gap: 20px;
 
-	&__wrap {
+	&__card {
 		border: 1px solid var(--grey-color);
 		border-radius: 15px;
-		padding: 25px 35px;
+		padding: 20px 25px;
 		background: var(--light-color);
 
 		@media (max-width: 576px) {
-			padding: 25px 20px;
+			padding: 15px 20px;
 			width: 100%;
 		}
 	}
 
 	&__title {
-		@include adaptive-font(32, 24);
+		@include adaptive-font(22, 19);
 		margin: 0;
-		margin-bottom: 50px;
+		margin-bottom: 20px;
+		font-weight: 500;
 
 		@media (max-width: 576px) {
 			margin-bottom: 20px;
@@ -42,13 +43,12 @@
 
 	&__icon {
 		flex-shrink: 0;
-		width: 30px;
-		height: 30px;
+		width: 25px;
+		height: 25px;
 	}
 
 	&__text {
-		@include adaptive-font(20, 16);
-		font-weight: 600;
+		font-weight: 500;
 		font-style: normal;
 		line-height: 140%;
 		color: var(--grey-color);
@@ -64,8 +64,8 @@
 
 	&__icon {
 		flex-shrink: 0;
-		width: 30px;
-		height: 30px;
+		width: 25px;
+		height: 25px;
 	}
 
 	&__inner {
@@ -80,8 +80,7 @@
 }
 
 .phone {
-	@include adaptive-font(20, 16);
-	font-weight: 600;
+	font-weight: 500;
 	color: var(--grey-color);
 }
 

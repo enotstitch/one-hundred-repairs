@@ -44,8 +44,8 @@
 		position: relative;
 		flex-shrink: 0;
 		border-radius: 100%;
-		width: 85px;
-		height: 85px;
+		width: 86px;
+		height: 86px;
 		background-color: var(--accent-color);
 
 		&::before {
@@ -70,6 +70,7 @@
 			width: 40px;
 			height: 40px;
 			font-size: 40px;
+			line-height: 40px;
 			text-align: center;
 			color: var(--light-color);
 			transform: translate(-50%, -50%);
@@ -80,7 +81,10 @@
 		display: flex;
 		align-items: center;
 		gap: 30px;
-		align-self: flex-start;
+
+		@media (max-width: 576px) {
+			align-self: flex-start;
+		}
 
 		@media (max-width: 480px) {
 			align-self: center;
@@ -109,15 +113,19 @@
 	}
 
 	&__title {
-		@include adaptive-font(24, 18);
+		@include adaptive-font(19, 16);
 		margin: 0;
-		font-weight: 600;
+		font-weight: 500;
+
+		@media (max-width: 480px) {
+			text-transform: uppercase;
+		}
 	}
 
 	&__descr {
-		@include adaptive-font(20, 16);
 		margin: 0;
 		line-height: 140%;
+		color: var(--grey-color);
 	}
 
 	&:last-child {

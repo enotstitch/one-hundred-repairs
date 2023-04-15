@@ -4,6 +4,7 @@
 	background-color: var(--bg-color);
 
 	&__container {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -11,17 +12,33 @@
 		padding: 10px 15px;
 		min-height: 70px;
 		max-width: $container-width + px;
+
+		@media (max-width: 480px) {
+			flex-direction: column;
+			gap: 15px;
+			min-height: fit-content;
+		}
 	}
 
 	&__left {
 		display: flex;
 		align-items: center;
 		gap: 50px;
+
+		@media (max-width: 1200px) {
+			gap: 25px;
+		}
 	}
 
 	&__logo {
 		z-index: 5;
 		display: block;
+	}
+
+	&__link {
+		@media (max-width: 992px) {
+			display: none;
+		}
 	}
 
 	&__menu {
@@ -45,12 +62,20 @@
 			width: 100%;
 			height: 1px;
 			background-color: var(--accent-color);
+
+			@media (max-width: 480px) {
+				display: none;
+			}
 		}
 	}
 
 	&__yandex {
 		width: 95px;
 		height: 50px;
+
+		@media (max-width: 1200px) {
+			display: none;
+		}
 	}
 
 	&.fixed {
@@ -59,12 +84,20 @@
 		top: 0;
 		z-index: 10;
 	}
+
+	@media (max-width: 992px) {
+		padding-bottom: 0;
+	}
 }
 
 .logo__img {
 	width: 200px;
 	height: auto;
 	fill: var(--accent-color);
+
+	@media (max-width: 480px) {
+		width: 150px;
+	}
 }
 
 .links {
@@ -76,28 +109,48 @@
 		display: flex;
 		align-items: center;
 		gap: 15px;
+
+		@media (max-width: 992px) {
+			padding-right: 60px;
+		}
+
+		@media (max-width: 480px) {
+			padding-right: 0;
+		}
 	}
 
 	&__icon-phone {
-		width: 36px;
-		height: 36px;
+		width: 24px;
+		height: 24px;
 	}
 
 	&__item {
 		display: flex;
 		flex-direction: column;
 		font-weight: 500;
+
+		@media (max-width: 480px) {
+			flex-direction: row;
+			gap: 10px;
+		}
 	}
 
 	&-item__phone {
-		@include adaptive-font(18, 16);
 		margin-bottom: 5px;
 	}
 
 	&-item__modal {
-		@include adaptive-font(13, 16);
+		@include adaptive-font(14, 16);
 		width: fit-content;
 		color: var(--grey-color);
+
+		@media (max-width: 480px) {
+			display: none;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		gap: 20px;
 	}
 }
 
@@ -115,16 +168,13 @@
 	&__list {
 		flex-wrap: wrap;
 		justify-content: space-between;
-		gap: 10px 30px;
 
 		@media (max-width: 1200px) {
-			justify-content: center;
+			gap: 10px 20px;
 		}
 	}
 
 	&__link {
-		@include adaptive-font(18, 16);
-		color: var(--dark-color);
 		transition: color 0.2s;
 
 		&:hover {
@@ -133,7 +183,7 @@
 	}
 }
 
-@media (min-width: 767px) {
+@media (min-width: 992px) {
 	.menu__list {
 		display: flex;
 		align-items: center;
@@ -144,10 +194,10 @@
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
 	.menu__burger {
 		position: absolute;
-		right: 40px;
+		right: 20px;
 		top: 50%;
 		z-index: 15;
 		display: block;
@@ -162,6 +212,7 @@
 		&::before,
 		&::after {
 			position: absolute;
+			right: 0;
 			width: 100%;
 			height: 10%;
 			background-color: var(--accent-color);

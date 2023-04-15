@@ -1,8 +1,8 @@
 .advantage {
-	&__wrap {
+	&__cards {
 		display: flex;
 		flex-wrap: wrap;
-		align-items: center;
+		align-items: stretch;
 		justify-content: center;
 		gap: 50px 100px;
 
@@ -17,8 +17,9 @@
 	align-items: center;
 	border-radius: 15px;
 	padding: 20px 25px;
+	width: 100%;
 	max-width: 500px;
-	box-shadow: 0 0 35px rgb(0 0 0 / 25%);
+	box-shadow: 0 0 10px rgb(0 0 0 / 25%);
 	background: var(--light-color);
 	gap: 20px;
 
@@ -26,6 +27,15 @@
 		flex-shrink: 0;
 		width: 80px;
 		height: 80px;
+
+		use {
+			fill: var(--accent-color);
+		}
+
+		@media (max-width: 576px) {
+			width: 60px;
+			height: 60px;
+		}
 	}
 
 	&__text {
@@ -35,7 +45,6 @@
 	}
 
 	&__title {
-		@include adaptive-font(20, 18);
 		margin: 0;
 		margin-bottom: 10px;
 		font-weight: 500;
@@ -44,14 +53,15 @@
 	}
 
 	&__descr {
-		@include adaptive-font(17, 16);
 		margin: 0;
 		font-weight: 400;
 		line-height: 140%;
+		color: var(--grey-color);
 	}
+
 	@media (max-width: 576px) {
 		flex-direction: column;
 		padding: 15px 10px;
-		width: 100%;
+		max-width: 100%;
 	}
 }

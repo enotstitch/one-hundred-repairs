@@ -47,20 +47,20 @@
 	}
 
 	&__title {
-		@include adaptive-font(20, 14);
+		@include adaptive-font(19, 18);
 		position: relative;
 		z-index: 5;
 		width: 100%;
-		font-weight: 600;
-		line-height: 31px;
+		font-weight: 500;
+		line-height: 140%;
 		text-align: left;
+		@media (max-width: 992px) {
+			line-height: 115%;
+		}
 	}
 
 	&__text {
 		padding: 0 20px 20px 30px;
-
-		// line-height: 130%;
-		// color: var(--grey-color);
 	}
 
 	&.init .spollers__title {

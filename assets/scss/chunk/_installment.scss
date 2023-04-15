@@ -1,10 +1,8 @@
 .installment {
-	&__wrap {
-		padding: 120px 0;
+	padding: 120px 0;
 
-		@media (max-width: 576px) {
-			padding: 0;
-		}
+	@media (max-width: 576px) {
+		padding: 0;
 	}
 }
 
@@ -28,10 +26,11 @@
 		border-radius: 100%;
 		width: 150px;
 		height: 150px;
+		box-shadow: 0 0 10px rgb(0 0 0 / 25%);
 		font-weight: 600;
+		line-height: 140%;
 		color: var(--accent-color);
 		background-color: var(--light-color);
-		filter: drop-shadow(0 0 15px rgb(0 0 0 / 50%));
 	}
 
 	&::after {
@@ -46,17 +45,18 @@
 		border-radius: 100%;
 		width: 250px;
 		height: 250px;
+		box-shadow: 0 0 10px rgb(0 0 0 / 25%);
 		font-weight: 600;
+		line-height: 140%;
 		text-align: center;
 		color: var(--accent-color);
 		background-color: var(--light-color);
-		filter: drop-shadow(0 0 15px rgb(0 0 0 / 50%));
 	}
 
 	&__title {
-		@include adaptive-font(32, 25);
+		@include adaptive-font(28, 25);
 		margin: 0;
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 		font-weight: 600;
 		line-height: 140%;
 	}
@@ -105,7 +105,7 @@
 	&__text {
 		@include adaptive-font(19, 16);
 		margin: 0;
-		line-height: 23px;
+		line-height: 140%;
 		color: var(--grey-color);
 
 		&--blue {
@@ -117,7 +117,6 @@
 	&__link {
 		display: block;
 		margin: 0 auto;
-		max-width: fit-content;
 	}
 
 	@media (max-width: 992px) {

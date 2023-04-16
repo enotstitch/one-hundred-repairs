@@ -1,0 +1,10 @@
+.calc {
+	display: flex;
+	flex-shrink: 0;
+	flex-direction: column;
+	border-radius: 15px;
+	padding: 20px 25px;
+	width: 100%;
+	max-width: 450px;
+	background-color: var(--dark-blue-color);
+}

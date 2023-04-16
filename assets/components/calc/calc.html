@@ -1,0 +1,37 @@
+<form class="calc" action="#">
+	<h2 class="calc__title">Площадь помещения, м<sup>2</sup></h2>
+
+	<div class="calc__square calc-square">
+		<input class="calc-square__range" id="calcRange" type="range" />
+		<label for="calcRange">
+			<output class="calc-square__value">32</output>
+		</label>
+	</div>
+
+	<h2 class="calc__title">Тип ремонта</h2>
+
+	<input id="draftRepair" name="radio" type="radio" />
+	<label for="draftRepair">Черновой</label>
+	<input id="capitalRepair" name="radio" type="radio" />
+	<label for="capitalRepair">Капитальный</label>
+	<input id="cosmeticRepair" name="radio" type="radio" />
+	<label for="cosmeticRepair">Косметический</label>
+	<input id="eliteRepair" name="radio" type="radio" />
+	<label for="eliteRepair">Элитный</label>
+
+	<h2 class="calc__title">Стоимость ремонта:</h2>
+
+	<output class="calc__cost">158 000₽</output>
+
+	<label for="calcPhone">
+		<input class="calc__phone" id="calcPhone" type="text" placeholder="Ваш телефон" />
+	</label>
+	<label for="calcSend">
+		<input class="calc__send" id="calcSend" type="submit" value="Отправить" />
+	</label>
+
+	<p class="calc__policy calc-policy">
+		Нажимая на кнопку, Вы соглашаетесь с
+		<a class="calc-policy__link link-reset" href="#/">политикой конфиденциальности</a>
+	</p>
+</form>

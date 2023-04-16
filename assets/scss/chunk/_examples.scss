@@ -19,11 +19,28 @@
 
 	&__img {
 		position: relative;
-		width: 400px;
+
+		// width: 400px;
 		height: auto;
 	}
 
 	&__deadline {
+		@include adaptive-font(15, 14);
+		position: absolute;
+		left: 25px;
+		top: 55px;
+		border-radius: 15px;
+		padding: 9px;
+		color: var(--light-color);
+		background-color: var(--accent-color);
+		@media (max-width: 576px) {
+			left: unset;
+			right: 25px;
+			top: 10px;
+		}
+	}
+
+	&__square {
 		@include adaptive-font(15, 14);
 		position: absolute;
 		left: 25px;
@@ -32,10 +49,6 @@
 		padding: 9px;
 		color: var(--light-color);
 		background-color: var(--accent-color);
-		@media (max-width: 576px) {
-			left: 50%;
-			transform: translateX(-50%);
-		}
 	}
 
 	&__content {

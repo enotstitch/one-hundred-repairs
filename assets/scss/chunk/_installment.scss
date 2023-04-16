@@ -11,12 +11,12 @@
 	margin: auto;
 	border-radius: 15px;
 	padding: 20px 25px;
-	max-width: 500px;
+	max-width: 400px;
 	background-color: var(--light-color);
 
-	&::before {
-		@include adaptive-font(68, 38);
-		content: '0%';
+	&__circle-left {
+		@include adaptive-font(60, 38);
+		content: '';
 		position: absolute;
 		left: -120px;
 		top: -110px;
@@ -33,13 +33,14 @@
 		background-color: var(--light-color);
 	}
 
-	&::after {
-		@include adaptive-font(44, 38);
-		content: '12 Месяцев';
+	&__circle-right {
+		@include adaptive-font(35, 38);
+		content: '';
 		position: absolute;
 		right: -180px;
 		bottom: -170px;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		border-radius: 100%;
@@ -47,7 +48,8 @@
 		height: 250px;
 		box-shadow: 0 0 10px rgb(0 0 0 / 25%);
 		font-weight: 600;
-		line-height: 140%;
+		line-height: 100%;
+		white-space: pre-wrap;
 		text-align: center;
 		color: var(--accent-color);
 		background-color: var(--light-color);
@@ -112,6 +114,12 @@
 			@include adaptive-font(21, 18);
 			color: var(--accent-color);
 		}
+
+		&--big {
+			@include adaptive-font(80, 38);
+			line-height: 100%;
+			color: var(--accent-color);
+		}
 	}
 
 	&__link {
@@ -120,8 +128,8 @@
 	}
 
 	@media (max-width: 992px) {
-		&::after,
-		&::before {
+		&__circle-left,
+		&__circle-right {
 			display: none;
 		}
 	}

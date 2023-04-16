@@ -1,0 +1,30 @@
+.repair-stages {
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	&__text {
+		line-height: 140%;
+	}
+
+	&__list {
+		list-style: decimal inside;
+		padding-left: 20px;
+
+		@media (max-width: 576px) {
+			padding-left: 10px;
+		}
+	}
+
+	&__item {
+		margin-bottom: 5px;
+		line-height: 140%;
+		color: var(--grey-color);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

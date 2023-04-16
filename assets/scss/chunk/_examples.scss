@@ -2,6 +2,7 @@
 	&__cards {
 		display: flex;
 		flex-wrap: wrap;
+		align-items: stretch;
 		justify-content: center;
 		gap: 30px;
 	}
@@ -12,6 +13,7 @@
 	flex-direction: column;
 	overflow: hidden;
 	border-radius: 15px;
+	min-height: 440px;
 	max-width: 355px;
 	box-shadow: 0 0 10px rgb(0 0 0 / 25%);
 
@@ -78,5 +80,18 @@
 		&--blue {
 			color: var(--accent-color);
 		}
+	}
+}
+
+.geo {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+
+	&__icon {
+		flex-shrink: 0;
+		width: 20px;
+		height: 20px;
 	}
 }

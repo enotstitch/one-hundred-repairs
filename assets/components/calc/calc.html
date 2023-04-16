@@ -1,34 +1,46 @@
 <form class="calc" action="#">
-	<h2 class="calc__title">Площадь помещения, м<sup>2</sup></h2>
+	<h2 class="calc__title">Площадь помещения,&#160;м<sup>2</sup></h2>
 
 	<div class="calc__square calc-square">
 		<input class="calc-square__range" id="calcRange" type="range" />
-		<label for="calcRange">
+		<label class="calc-square__label" for="calcRange">
 			<output class="calc-square__value">32</output>
 		</label>
 	</div>
 
 	<h2 class="calc__title">Тип ремонта</h2>
 
-	<input id="draftRepair" name="radio" type="radio" />
-	<label for="draftRepair">Черновой</label>
-	<input id="capitalRepair" name="radio" type="radio" />
-	<label for="capitalRepair">Капитальный</label>
-	<input id="cosmeticRepair" name="radio" type="radio" />
-	<label for="cosmeticRepair">Косметический</label>
-	<input id="eliteRepair" name="radio" type="radio" />
-	<label for="eliteRepair">Элитный</label>
+	<div class="calc__type calc-type">
+		<div class="calc-type__item">
+			<input class="calc-type__radio" id="draftRepair" name="radio" type="radio" />
+			<label class="calc-type__value" for="draftRepair">Черновой</label>
+		</div>
+		<div class="calc-type__item">
+			<input class="calc-type__radio" id="capitalRepair" name="radio" type="radio" />
+			<label class="calc-type__value" for="capitalRepair">Капитальный</label>
+		</div>
+		<div class="calc-type__item">
+			<input class="calc-type__radio" id="cosmeticRepair" name="radio" type="radio" />
+			<label class="calc-type__value" for="cosmeticRepair">Косметический</label>
+		</div>
+		<div class="calc-type__item">
+			<input class="calc-type__radio" id="eliteRepair" name="radio" type="radio" />
+			<label class="calc-type__value" for="eliteRepair">Элитный</label>
+		</div>
+	</div>
 
 	<h2 class="calc__title">Стоимость ремонта:</h2>
 
 	<output class="calc__cost">158 000₽</output>
 
-	<label for="calcPhone">
-		<input class="calc__phone" id="calcPhone" type="text" placeholder="Ваш телефон" />
-	</label>
-	<label for="calcSend">
-		<input class="calc__send" id="calcSend" type="submit" value="Отправить" />
-	</label>
+	<div class="calc__inner">
+		<label for="calcPhone">
+			<input class="calc__phone" id="calcPhone" type="text" placeholder="Ваш телефон" />
+		</label>
+		<label for="calcSend">
+			<input class="calc__send" id="calcSend" type="submit" value="Отправить" />
+		</label>
+	</div>
 
 	<p class="calc__policy calc-policy">
 		Нажимая на кнопку, Вы соглашаетесь с

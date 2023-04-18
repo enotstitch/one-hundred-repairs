@@ -1,0 +1,28 @@
+.experts-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	border-radius: 15px;
+	padding: 20px 25px;
+	max-width: 360px;
+	box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+	text-align: center;
+	gap: 20px;
+
+	&__avatar {
+		border-radius: 100%;
+		width: 100px;
+		height: 100px;
+		box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+	}
+
+	&__name {
+		margin: 0;
+	}
+
+	&__descr {
+		color: var(--grey-color);
+	}
+}

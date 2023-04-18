@@ -10,7 +10,8 @@
 // @import "libs/animate";
 
 // * Подключение стилей swiper-слайдера
-// @import "libs/swiper-bundle.min";
+@import 'libs/swiper-bundle.min';
+@import '../components/slider/slider';
 @import '../components/spollers/spollers';
 
 // * Main styles
@@ -30,6 +31,7 @@
 @import 'chunk/repair-stages';
 @import 'chunk/foreman';
 @import 'chunk/turnkey';
+@import 'chunk/experts';
 @import 'chunk/numbers';
 @import 'chunk/questions';
 @import 'chunk/contacts';

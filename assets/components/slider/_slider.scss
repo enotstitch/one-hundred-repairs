@@ -1,17 +1,15 @@
 .slider-wrap {
 	position: relative;
-	overflow: hidden;
-	margin: 20px 0;
-	border: 2px var(--accent-color) dashed;
-	border-radius: 20px;
-	width: 600px;
 	height: auto;
+	max-width: 1240px;
 }
 
 .swiper {
+	padding: 10px;
+
 	&-btn {
 		position: absolute;
-		top: 50%;
+		bottom: -85px;
 		z-index: 5;
 		width: 30px;
 		height: 30px;
@@ -19,15 +17,20 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		transform: translateY(-50%);
-	}
+		cursor: pointer;
 
-	&--next {
-		right: 20px;
-		background-image: url('../img/sliders/next-arrow.svg');
-	}
+		&--next {
+			right: 45%;
+			background-image: url('@img/icons/sprite.svg#slider-next-arrow');
+		}
 
-	&--prev {
-		left: 20px;
-		background-image: url('../img/sliders/prev-arrow.svg');
+		&--prev {
+			left: 45%;
+			background-image: url('@img/icons/sprite.svg#slider-prev-arrow');
+		}
+
+		@media (max-width: 768px) {
+			display: none;
+		}
 	}
 }

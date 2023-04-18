@@ -19,8 +19,6 @@
 
 	&__img {
 		position: relative;
-
-		// width: 400px;
 		height: auto;
 	}
 
@@ -28,7 +26,9 @@
 		@include adaptive-font(15, 14);
 		position: absolute;
 		left: 25px;
-		top: 55px;
+		top: 60px;
+		display: flex;
+		align-items: center;
 		border-radius: 15px;
 		padding: 9px;
 		color: var(--light-color);
@@ -45,10 +45,22 @@
 		position: absolute;
 		left: 25px;
 		top: 10px;
+		display: flex;
+		align-items: center;
 		border-radius: 15px;
 		padding: 9px;
 		color: var(--light-color);
 		background-color: var(--accent-color);
+	}
+
+	&__icon {
+		margin-right: 10px;
+		width: 25px;
+		height: 25px;
+
+		use {
+			fill: var(--light-color);
+		}
 	}
 
 	&__content {

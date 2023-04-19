@@ -5,6 +5,7 @@
 @import 'fonts';
 @import 'settings';
 @import 'interface';
+@import 'animate';
 
 // * Libs styles
 // @import "libs/animate";
@@ -28,6 +29,8 @@
 @import 'chunk/deadline';
 @import 'chunk/where';
 @import 'chunk/stock';
+@import 'chunk/service-prices';
+@import '../components/tabs/tabs';
 @import 'chunk/repair-stages';
 @import 'chunk/foreman';
 @import 'chunk/turnkey';

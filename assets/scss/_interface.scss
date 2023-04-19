@@ -258,16 +258,17 @@
 	border: 1px solid var(--grey-color);
 }
 
+.table-wrap {
+	overflow-x: auto;
+	border-radius: 15px;
+	width: 100%;
+	box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+}
+
 .table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	width: 100%;
-
-	&__wrap {
-		overflow-x: auto;
-		border-radius: 15px;
-		box-shadow: 0 0 10px rgb(0 0 0 / 25%);
-	}
 
 	&__body {
 		tr {
@@ -305,6 +306,10 @@
 
 		&:first-child {
 			text-align: left;
+		}
+
+		&--center {
+			text-align: center !important;
 		}
 	}
 }

@@ -1,0 +1,8 @@
+.service-prices {
+	&__text {
+		@include adaptive-font(14, 14);
+		margin: 0;
+		line-height: 140%;
+		color: var(--dark-opacity-color);
+	}
+}

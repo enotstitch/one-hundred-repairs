@@ -46,10 +46,13 @@
 		@include adaptive-font(23, 18);
 		display: inline-block;
 		align-self: center;
-		margin-bottom: 10px;
 
 		&--blue {
 			color: var(--accent-color);
+		}
+
+		@media (max-width: 992px) {
+			margin-bottom: 10px;
 		}
 	}
 }

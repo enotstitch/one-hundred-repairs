@@ -38,4 +38,5 @@ function tabs(headerSelector, tabSelector, contentSelector, activeClass, display
 // ВТОРОЙ аргумент - класс конкретного элемента, при клике на который будет переключатся таб.
 // ТРЕТИЙ аргумент - класс того блока, который будет переключаться.
 // ЧЕТВЕРТЫЙ аргумент - класс активности, который будет добавлятся для таба, который сейчас активен.
-tabs('.tabs__header', '.tabs__header-item', '.tabs__content-item', 'active');
+// tabs('.tabs__header', '.tabs__header-item', '.tabs__content-item', 'active');
+tabs('.stages-tabs__header', '.stages-tabs__header-item', '.stages-tabs__content-item', 'active');

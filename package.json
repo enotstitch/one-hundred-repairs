@@ -74,5 +74,8 @@
 		"vinyl-ftp": "^0.6.1",
 		"webpack": "^5.72.1",
 		"webpack-stream": "^7.0.0"
+	},
+	"dependencies": {
+		"fslightbox": "^3.4.1"
 	}
 }

@@ -1,0 +1,16 @@
+.gallery {
+	&__wrap {
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__item {
+		overflow: hidden;
+		border-radius: 15px;
+		width: 100%;
+		min-height: 150px;
+		max-width: 300px;
+	}
+}

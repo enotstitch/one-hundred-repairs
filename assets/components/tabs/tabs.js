@@ -3,6 +3,8 @@ function tabs(headerSelector, tabSelector, contentSelector, activeClass, display
 		tab = document.querySelectorAll(tabSelector),
 		content = document.querySelectorAll(contentSelector);
 
+	if (!content[0]) return;
+
 	function hideTabContent() {
 		content.forEach((item) => {
 			item.style.display = 'none';
@@ -38,4 +40,6 @@ function tabs(headerSelector, tabSelector, contentSelector, activeClass, display
 // ВТОРОЙ аргумент - класс конкретного элемента, при клике на который будет переключатся таб.
 // ТРЕТИЙ аргумент - класс того блока, который будет переключаться.
 // ЧЕТВЕРТЫЙ аргумент - класс активности, который будет добавлятся для таба, который сейчас активен.
+
 tabs('.tabs__header', '.tabs__header-item', '.tabs__content-item', 'active');
+tabs('.stages-tabs__header', '.stages-tabs__header-item', '.stages-tabs__content-item', 'active');

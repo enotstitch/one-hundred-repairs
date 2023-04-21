@@ -1,0 +1,58 @@
+.product-repair {
+	&__wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+
+		@media (max-width: 992px) {
+			flex-direction: column;
+		}
+	}
+
+	&__img {
+		overflow: hidden;
+		border-radius: 15px;
+		height: min-content;
+		max-width: 460px;
+	}
+
+	&__info {
+		max-width: 55%;
+
+		@media (max-width: 992px) {
+			max-width: 530px;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width: 480px) {
+			flex-direction: column;
+		}
+	}
+
+	&__text {
+		margin-bottom: 90px;
+
+		@media (max-width: 992px) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__cost {
+		@include adaptive-font(23, 18);
+		display: inline-block;
+		align-self: center;
+
+		&--blue {
+			color: var(--accent-color);
+		}
+
+		@media (max-width: 992px) {
+			margin-bottom: 10px;
+		}
+	}
+}

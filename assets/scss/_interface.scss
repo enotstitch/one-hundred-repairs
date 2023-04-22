@@ -107,10 +107,8 @@
 		background-color: transparent;
 
 		&:hover {
-			border: 2px solid transparent;
-			color: var(--light-color);
-			background-color: var(--accent-color);
-			filter: brightness(100%);
+			border-color: var(--accent-color);
+			color: var(--accent-color);
 		}
 	}
 

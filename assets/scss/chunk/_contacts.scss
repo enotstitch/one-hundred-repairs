@@ -82,6 +82,11 @@
 .phone {
 	font-weight: 500;
 	color: var(--grey-color);
+	transition: color 0.2s;
+
+	&:hover {
+		color: var(--dark-color);
+	}
 }
 
 .map {

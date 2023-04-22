@@ -1,0 +1,44 @@
+.price-impact {
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 55px;
+		gap: 15px;
+		@media (max-width: 768px) {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&--decor {
+			position: relative;
+			margin-bottom: 0;
+			padding-left: 35px;
+			max-width: 500px;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 50%;
+				width: 20px;
+				height: 25px;
+				background-image: url('../img/icons/sprite.svg#arrow');
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				transform: translateY(-50%);
+			}
+			@media (max-width: 768px) {
+				max-width: 100%;
+			}
+		}
+	}
+}

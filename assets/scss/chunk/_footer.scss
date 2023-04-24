@@ -48,4 +48,13 @@
 			margin: 0;
 		}
 	}
+
+	&__link {
+		transition: all 0.2s;
+
+		&:hover {
+			border-bottom: 1px solid currentcolor;
+			filter: brightness(75%);
+		}
+	}
 }

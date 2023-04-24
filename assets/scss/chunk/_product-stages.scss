@@ -26,12 +26,21 @@
 			padding: 15px 40px;
 			text-align: center;
 			color: var(--accent-color);
+			transition: filter 0.2s;
 			cursor: pointer;
+
+			&:hover {
+				filter: brightness(113%);
+			}
 
 			&.active {
 				border-style: solid;
 				color: var(--light-color);
 				background-color: var(--accent-color);
+
+				&:hover {
+					filter: brightness(100%);
+				}
 			}
 		}
 

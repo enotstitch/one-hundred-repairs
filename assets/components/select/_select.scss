@@ -25,6 +25,7 @@
 		width: 7px;
 		height: 20px;
 		transform: rotate(90deg);
+		transition: transform 0.2s;
 	}
 
 	&__body {
@@ -59,7 +60,7 @@
 		width: max-content;
 	}
 
-	&.is-active .select__icon {
+	&.is-active .select__arrow {
 		transform: rotate(-90deg);
 	}
 

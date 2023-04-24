@@ -137,12 +137,23 @@
 
 	&-item__phone {
 		margin-bottom: 5px;
+		transition: opacity 0.2s;
+
+		&:hover {
+			opacity: 0.75;
+		}
 	}
 
 	&-item__modal {
 		@include adaptive-font(14, 16);
+		border-bottom: 1px solid transparent;
 		width: fit-content;
 		color: var(--grey-color);
+		transition: border-bottom 0.2s;
+
+		&:hover {
+			border-bottom: 1px solid var(--grey-color);
+		}
 
 		@media (max-width: 480px) {
 			display: none;

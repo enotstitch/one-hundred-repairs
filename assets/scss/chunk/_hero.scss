@@ -54,15 +54,6 @@
 		}
 	}
 
-	&__link {
-		&:hover {
-			border: 2px solid #fff;
-			border-radius: 15px;
-			color: var(--light-color);
-			background-color: transparent;
-		}
-	}
-
 	@media (max-width: 992px) {
 		flex-direction: column;
 	}

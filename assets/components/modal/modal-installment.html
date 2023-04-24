@@ -1,0 +1,73 @@
+<div class="modal" id="modalInstallment">
+	<div class="modal__body">
+		<form class="form modal__content" action="#">
+			<a class="modal__close close-modal" href="#header">X</a>
+			<h3 class="form__title">Узнать о рассрочке</h3>
+			<p class="text form__descr">
+				Выберите способ связи и наш специалист свяжется с вами в ближайшее время
+			</p>
+			<div class="form__socials">
+				<div class="form__social form-social">
+					<input
+						class="is-hidden"
+						id="telegramInstallment"
+						name="social"
+						type="radio"
+						value="telegram"
+					/>
+					<label class="form-social__label" for="telegramInstallment">
+						<svg class="form-social__icon">
+							<use href="img/icons/sprite.svg#telegram-icon"></use>
+						</svg>
+						<span class="form-social__name">Telegram</span>
+					</label>
+				</div>
+
+				<div class="form__social form-social">
+					<input
+						class="is-hidden"
+						id="whatsappInstallment"
+						name="social"
+						type="radio"
+						value="whatsapp"
+					/>
+					<label class="form-social__label" for="whatsappInstallment">
+						<svg class="form-social__icon">
+							<use href="img/icons/sprite.svg#whatsapp-icon"></use>
+						</svg>
+						<span class="form-social__name">Whatsapp</span>
+					</label>
+				</div>
+
+				<div class="form__social form-social">
+					<input class="is-hidden" id="phoneInstallment" name="social" type="radio" value="phone" />
+					<label class="form-social__label" for="phoneInstallment">
+						<svg class="form-social__icon">
+							<use href="img/icons/sprite.svg#phone-icon"></use>
+						</svg>
+						<span class="form-social__name">Телефон</span>
+					</label>
+				</div>
+
+				<div class="form__social form-social">
+					<input class="is-hidden" id="viberInstallment" name="social" type="radio" value="viber" />
+					<label class="form-social__label" for="viberInstallment">
+						<svg class="form-social__icon">
+							<use href="img/icons/sprite.svg#viber-icon"></use>
+						</svg>
+						<span class="form-social__name">Viber</span>
+					</label>
+				</div>
+			</div>
+			<div class="form__inputs">
+				<input class="form__input-text" type="text" placeholder="Ваше имя" />
+				<input class="form__input-text" type="text" placeholder="Ваш телефон" />
+				<input class="btn-reset form__input-button" type="submit" value="Отправить" />
+			</div>
+			<p class="form__text">
+				Нажимая на кнопку, Вы соглашаетесь с
+				<a class="form__text form__text--link link-reset" href="#/">политикой конфиденциальности</a>
+			</p>
+		</form>
+	</div>
+</div>

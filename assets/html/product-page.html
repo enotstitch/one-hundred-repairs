@@ -13,13 +13,13 @@
 		<div class="site-container">
 			@include('../components/header/header.html')
 			<main class="main">
-				@include('chunk/product-hero.html')
-				@include('chunk/product-repair.html')
-				@include('chunk/product-stages.html')
-				@include('chunk/price-impact.html')
+				@include('chunk/product-hero.html') @include('chunk/product-repair.html')
+				@include('chunk/product-stages.html') @include('chunk/price-impact.html')
 				@include('chunk/separate-cost.html')
 			</main>
-			@include('chunk/footer.html')
+			@include('chunk/footer.html') @include('../components/modal/modal-application.html')
+			@include('../components/modal/modal-question.html')
+			@include('../components/modal/modal-stock.html')
 		</div>
 		<script src="js/scripts.min.js"></script>
 	</body>

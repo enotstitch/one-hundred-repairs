@@ -12,7 +12,7 @@
 	</head>
 
 	<body>
-		<div class="site-container">
+		<div class="site-container" id="siteContainer">
 			@include('../components/header/header.html')
 			<main class="main">
 				@include('chunk/hero.html')
@@ -37,6 +37,7 @@
 				@include('chunk/contacts.html')
 			</main>
 			@include('chunk/footer.html')
+			@include('../components/sidebar/sidebar.html')
 		</div>
 		<script src="js/scripts.min.js"></script>
 	</body>

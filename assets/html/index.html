@@ -12,7 +12,7 @@
 	</head>
 
 	<body>
-		<div class="site-container">
+		<div class="site-container" id="siteContainer">
 			@include('../components/header/header.html')
 			<main class="main">
 				@include('chunk/hero.html')
@@ -38,6 +38,7 @@
 				@include('chunk/tags.html')
 			</main>
 			@include('chunk/footer.html')
+			@include('../components/sidebar/sidebar.html')
 			@include('../components/modal/modal-application.html')
 			@include('../components/modal/modal-question.html')
 			@include('../components/modal/modal-installment.html')

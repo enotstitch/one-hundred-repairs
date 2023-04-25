@@ -2,8 +2,6 @@
 	position: fixed;
 	right: 0;
 	top: 50%;
-	overflow: hidden;
-	border-radius: 15px 0 0 15px;
 	transform: translateY(-50%);
 
 	&__link {
@@ -13,11 +11,11 @@
 		margin-bottom: 10px;
 		border-radius: 15px 0 0 15px;
 		padding: 10px 15px;
-		min-height: 80px;
+		min-height: 60px;
 		max-width: 250px;
 		box-shadow: 0 0 10px rgb(0 0 0 / 25%);
 		background-color: var(--accent-color);
-		transform: translateX(170px);
+		transform: translateX(185px);
 		transition: all 0.3s;
 		gap: 20px;
 
@@ -32,8 +30,8 @@
 
 	&__icon {
 		flex-shrink: 0;
-		width: 50px;
-		height: 50px;
+		width: 40px;
+		height: 40px;
 	}
 
 	&__descr {

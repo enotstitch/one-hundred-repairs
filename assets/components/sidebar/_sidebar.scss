@@ -26,12 +26,23 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
+
+		@media (max-width: 1200px) {
+			padding: 10px 7px;
+			min-height: 30px;
+			transform: translateX(215px);
+		}
 	}
 
 	&__icon {
 		flex-shrink: 0;
 		width: 40px;
 		height: 40px;
+
+		@media (max-width: 1200px) {
+			width: 25px;
+			height: 25px;
+		}
 	}
 
 	&__descr {

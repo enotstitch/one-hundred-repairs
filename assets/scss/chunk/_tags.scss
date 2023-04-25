@@ -11,9 +11,10 @@
 		overflow: hidden;
 		margin-bottom: 20px;
 		gap: 7px;
+		max-height: 35px;
 
-		&.hidden {
-			max-height: 35px;
+		&.tags-visible {
+			max-height: max-content;
 		}
 	}
 }

@@ -2,12 +2,12 @@ const tagsLink = document.querySelector('.tags__link');
 const tagsWrap = document.querySelector('.tags__wrap');
 
 const changeLinkText = () => {
-	const isTagsHidden = tagsWrap.classList.contains('hidden');
+	const isTagsVisible = tagsWrap.classList.contains('tags-visible');
 
-	if (isTagsHidden) {
-		tagsLink.textContent = 'Показать больше';
-	} else {
+	if (isTagsVisible) {
 		tagsLink.textContent = 'Свернуть';
+	} else {
+		tagsLink.textContent = 'Показать больше';
 	}
 };
 
@@ -16,7 +16,7 @@ const showMoreTags = () => {
 	const tagItems = tags.length;
 
 	if (tagItems > 7) {
-		tagsWrap.classList.toggle('hidden');
+		tagsWrap.classList.toggle('tags-visible');
 	}
 
 	changeLinkText();

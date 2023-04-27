@@ -93,27 +93,27 @@ export const quizData = [
 		answer_alias: 'budget',
 		answers: [
 			{
-				answer_title: 'До 150 000&#8381;',
+				answer_title: 'До 150 000 рублей',
 				type: 'radio',
 			},
 			{
-				answer_title: 'От 150 000&#8381; до 200 000&#8381;',
+				answer_title: 'От 150 000 до 200 000 рублей',
 				type: 'radio',
 			},
 			{
-				answer_title: 'От 200 000&#8381; до 300 000&#8381;',
+				answer_title: 'От 200 000 до 300 000 рублей',
 				type: 'radio',
 			},
 			{
-				answer_title: 'От 300 000&#8381; до 500 000&#8381;',
+				answer_title: 'От 300 000 до 500 000 рублей',
 				type: 'radio',
 			},
 			{
-				answer_title: 'От 500 000&#8381; до 1 000 000&#8381;',
+				answer_title: 'От 500 000 до 1 млн рублей',
 				type: 'radio',
 			},
 			{
-				answer_title: 'От 1 000 000&#8381;',
+				answer_title: 'От 1 млн рублей',
 				type: 'radio',
 			},
 		],

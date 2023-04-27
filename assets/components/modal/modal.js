@@ -92,7 +92,10 @@ document.addEventListener('keydown', function (e) {
 
 modals.forEach((modal) => {
 	modal.addEventListener('click', (e) => {
-		if (!e.target.closest('.modal__content')) {
+		if (
+			!e.target.closest('.modal__content') &&
+			!e.target.classList.contains('quiz-question__btn')
+		) {
 			modalClose();
 		}
 	});

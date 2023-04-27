@@ -74,7 +74,7 @@ img {
 }
 
 .error {
-	border: 2px rgb(240 100 100) solid;
+	animation: head-shake 0.7s;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

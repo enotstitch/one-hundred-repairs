@@ -3,19 +3,32 @@ import { quizData } from './quizData.js';
 const quizTemplate = (data = [], dataLength, options) => {
 	const { number, title } = data;
 	const { nextBtnText } = options;
-	const answers = data.answers.map((item) => {
-		return `
 
+	const answers = data.answers.map((item) => {
+		if (item.type === 'radio') {
+			return `
 			<label class="quiz-question__label">
-				<input type="${item.type}" data-valid="false" class="quiz-question__answer" name="${
-			data.answer_alias
-		}" ${item.type == 'text' ? 'placeholder="Введите ваш вариант"' : ''} value="${
-			item.type !== 'text' ? item.answer_title : ''
-		}">
+				<input type="${item.type}" data-valid="false" class="quiz-question__checkbox-real" name="${
+				data.answer_alias
+			}" ${item.type == 'text' ? 'placeholder="Введите ваш вариант"' : ''} value="${
+				item.type !== 'text' ? item.answer_title : ''
+			}"/>
+				<span class="quiz-question__checkbox-fake"></span>
 				<span>${item.answer_title}</span>
 			</label>
-
 		`;
+		} else {
+			return `
+			<label class="quiz-question__label quiz-question__label--column">
+				<input type="${item.type}" data-valid="false" class="quiz-question__answer" name="${
+				data.answer_alias
+			}" ${item.type == 'text' ? 'placeholder="Введите ваш вариант"' : ''} value="${
+				item.type !== 'text' ? item.answer_title : ''
+			}">
+				<span>${item.answer_title}</span>
+			</label>
+		`;
+		}
 	});
 
 	return `
@@ -101,15 +114,19 @@ class Quiz {
 		elements.forEach((el) => {
 			switch (el.type) {
 				case 'text':
-					el.value ? (isValid = true) : el.classList.add('error');
+					el.value ? (isValid = true) : el.closest('.quiz-question__label').classList.add('error');
 				case 'checkbox':
-					el.checked ? (isValid = true) : el.classList.add('error');
+					el.checked
+						? (isValid = true)
+						: el.closest('.quiz-question__label').classList.add('error');
 				case 'radio':
-					el.checked ? (isValid = true) : el.classList.add('error');
+					el.checked
+						? (isValid = true)
+						: el.closest('.quiz-question__label').classList.add('error');
 			}
 
 			setTimeout(() => {
-				el.classList.remove('error');
+				el.closest('.quiz-question__label').classList.remove('error');
 			}, 700);
 		});
 

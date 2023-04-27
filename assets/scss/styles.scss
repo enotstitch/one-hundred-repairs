@@ -13,11 +13,11 @@
 // * Подключение стилей swiper-слайдера
 @import 'libs/swiper-bundle.min';
 @import '../components/modal/modal';
+@import '../components/quiz/quiz';
 @import '../components/slider/slider';
 @import '../components/spollers/spollers';
 
 // * Main styles
-@import '../components/quiz/quiz';
 @import '../components/header/header';
 @import '../components/select/select';
 @import 'chunk/hero';
@@ -28,6 +28,7 @@
 @import 'chunk/advantage';
 @import 'chunk/examples';
 @import 'chunk/steps';
+@import 'chunk/reviews';
 @import 'chunk/deadline';
 @import 'chunk/where';
 @import 'chunk/stock';

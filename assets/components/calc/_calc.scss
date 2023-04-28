@@ -25,7 +25,10 @@
 
 	&__inner {
 		position: relative;
+		display: flex;
+		flex-direction: column;
 		margin-bottom: 20px;
+		gap: 15px;
 	}
 
 	&__phone {
@@ -36,17 +39,19 @@
 		width: 100%;
 		color: var(--light-color);
 		background-color: transparent;
+
+		&::placeholder {
+			text-align: center;
+			color: var(--light-color);
+		}
 	}
 
 	&__send {
-		position: absolute;
-		right: 0;
-		top: 0;
 		border: none;
 		border: 2px solid var(--accent-color);
 		border-radius: 15px;
 		padding: 15px;
-		height: 100%;
+		width: 100%;
 		color: var(--light-color);
 		background-color: var(--accent-color);
 		transition: all 0.3s;
@@ -67,7 +72,37 @@
 	margin-bottom: 40px;
 
 	&__range {
+		appearance: none;
+		outline: none;
+		border-radius: 20px;
 		width: 80%;
+		height: 10px;
+		background-image: linear-gradient(var(--accent-color), var(--accent-color));
+		background-size: 9% 100%;
+		background-repeat: no-repeat;
+		background-color: var(--light-color);
+
+		&::-moz-range-thumb {
+			appearance: none;
+			border: 3px solid var(--accent-color);
+			border-radius: 50%;
+			width: 15px;
+			height: 15px;
+			box-shadow: 4px 4px 8px 0 rgb(34 60 80 / 20%);
+			background-color: var(--light-color);
+			cursor: pointer;
+		}
+
+		&::-webkit-slider-thumb {
+			appearance: none;
+			border: 3px solid var(--accent-color);
+			border-radius: 50%;
+			width: 25px;
+			height: 25px;
+			box-shadow: 4px 4px 8px 0 rgb(34 60 80 / 20%);
+			background-color: var(--light-color);
+			cursor: pointer;
+		}
 	}
 
 	&__label {
@@ -86,6 +121,60 @@
 	grid-template-columns: 2fr 2fr;
 	margin-bottom: 40px;
 	gap: 5px 15px;
+
+	&__value {
+		display: flex;
+		align-items: center;
+		gap: 7px;
+	}
+
+	&__radio {
+		&-real {
+			position: absolute;
+			z-index: -1;
+			width: 0;
+			height: 0;
+			opacity: 0;
+		}
+
+		&-fake {
+			position: relative;
+			display: inline-block;
+			flex-shrink: 0;
+			border: 1px solid var(--light-color);
+			border-radius: 50%;
+			width: 16px;
+			height: 16px;
+			background-color: var(--light-color);
+			cursor: pointer;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				border-radius: 50%;
+				width: 10px;
+				height: 10px;
+				background-color: var(--accent-color);
+				transform: translate(-50%, -50%) scale(0);
+				transition: 0.2s ease-in;
+			}
+
+			.calc-type__radio-real:checked + &::before {
+				transform: translate(-50%, -50%) scale(1);
+			}
+
+			.calc-type__radio-real:focus-visible + & {
+				box-shadow: 0 0 0 2px var(--accent-color), 0 0 10px rgb(122 204 130 / 50%);
+			}
+		}
+	}
+
+	@media (max-width: 480px) {
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
 }
 
 .calc-policy {

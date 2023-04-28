@@ -67,7 +67,7 @@
 .quiz-question__checkbox-fake {
 	position: relative;
 	flex-shrink: 0;
-	border: 1px solid #998897;
+	border: 1px solid var(--grey-color);
 	border-radius: 50%;
 	width: 20px;
 	height: 20px;

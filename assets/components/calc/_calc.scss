@@ -105,13 +105,24 @@
 		}
 	}
 
+	&__button {
+		@include adaptive-font(18, 16);
+		color: var(--grey-color);
+	}
+
 	&__label {
+		display: flex;
+		align-items: center;
 		border-radius: 15px;
-		padding: 10px 25px;
+		gap: 10px;
+		padding: 12px 7px;
 		background-color: var(--light-color);
 	}
 
 	&__value {
+		all: unset;
+		max-width: 33px;
+		text-align: center;
 		color: var(--dark-color);
 	}
 }

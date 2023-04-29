@@ -269,6 +269,8 @@
 	width: 100%;
 
 	&__body {
+		background-color: var(--light-color);
+
 		tr {
 			border-bottom: 1px solid #dfdfdf;
 

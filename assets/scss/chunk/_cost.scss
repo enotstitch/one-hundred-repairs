@@ -14,11 +14,10 @@
 	border-radius: 15px;
 	max-width: 355px;
 	box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+	background-color: var(--light-color);
 
 	&__img {
 		position: relative;
-
-		// width: 400px;
 		height: auto;
 	}
 

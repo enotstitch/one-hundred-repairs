@@ -54,7 +54,6 @@ const squareControlsUpdate = (event) => {
 const priceUpdate = () => {
 	const { square } = currentRepair;
 	const totalPrice = square * currentRepair.getRepairPrice();
-	// 4,5,6,7
 	const priceStr = String(totalPrice);
 	const priceLenght = priceStr.length;
 	let priceView = '';

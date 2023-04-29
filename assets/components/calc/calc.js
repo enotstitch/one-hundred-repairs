@@ -16,8 +16,8 @@ const changeInputBackground = () => {
 
 const repairPrices = {
 	draftRepair: 3020,
-	capitalRepair: 5520,
-	cosmeticRepair: 8082,
+	capitalRepair: 8082,
+	cosmeticRepair: 5520,
 	eliteRepair: 13133,
 };
 
@@ -54,7 +54,41 @@ const squareControlsUpdate = (event) => {
 const priceUpdate = () => {
 	const { square } = currentRepair;
 	const totalPrice = square * currentRepair.getRepairPrice();
-	repairPrice.textContent = totalPrice + '\u20BD';
+	// 4,5,6,7
+	const priceStr = String(totalPrice);
+	const priceLenght = priceStr.length;
+	let priceView = '';
+	let million = '';
+	let thousand = '';
+	let remainder = '';
+
+	switch (priceLenght) {
+		case 4:
+			thousand = priceStr.slice(0, 1);
+			remainder = priceStr.slice(1);
+			break;
+
+		case 5:
+			thousand = priceStr.slice(0, 2);
+			remainder = priceStr.slice(2);
+			break;
+
+		case 6:
+			thousand = priceStr.slice(0, 3);
+			remainder = priceStr.slice(3);
+			break;
+
+		case 7:
+			million = priceStr.slice(0, 1);
+			thousand = priceStr.slice(1, 4);
+			remainder = priceStr.slice(4);
+			break;
+
+		default:
+			break;
+	}
+	console.log(totalPrice);
+	repairPrice.textContent = `${million} ${thousand} ${remainder}\u20BD`;
 };
 
 const squareInputUpdate = (event) => {

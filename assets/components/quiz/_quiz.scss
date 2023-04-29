@@ -8,6 +8,10 @@
 	text-align: center;
 }
 
+.quiz-question {
+	animation: fade-in 0.6s;
+}
+
 .quiz-question__title {
 	@include adaptive-font(26, 20);
 	margin: 0;

@@ -86,7 +86,6 @@ const priceUpdate = () => {
 		default:
 			break;
 	}
-	console.log(totalPrice);
 	repairPrice.textContent = `${million} ${thousand} ${remainder}\u20BD`;
 };
 

@@ -57,4 +57,8 @@
 			filter: brightness(75%);
 		}
 	}
+
+	@media (max-width: 768px) {
+		padding: 50px 0 65px;
+	}
 }

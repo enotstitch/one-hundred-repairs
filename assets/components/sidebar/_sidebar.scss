@@ -2,6 +2,8 @@
 	position: fixed;
 	right: 0;
 	top: 50%;
+	z-index: 5;
+	max-width: 65px;
 	transform: translateY(-50%);
 
 	&__link {
@@ -11,16 +13,16 @@
 		margin-bottom: 10px;
 		border-radius: 15px 0 0 15px;
 		padding: 10px 15px;
+		width: 250px;
 		min-height: 60px;
 		max-width: 250px;
 		box-shadow: 0 0 10px rgb(0 0 0 / 25%);
 		background-color: var(--accent-color);
-		transform: translateX(185px);
 		transition: all 0.3s;
 		gap: 20px;
 
 		&:hover {
-			transform: translateX(0);
+			transform: translateX(-185px);
 		}
 
 		&:last-child {
@@ -30,7 +32,6 @@
 		@media (max-width: 1200px) {
 			padding: 10px 7px;
 			min-height: 30px;
-			transform: translateX(215px);
 		}
 	}
 
@@ -49,12 +50,16 @@
 		@include adaptive-font(15, 14);
 		color: var(--light-color);
 	}
+	@media (max-width: 1200px) {
+		max-width: 35px;
+	}
 }
 
 .sidebar-socials {
 	position: fixed;
 	left: 0;
 	top: 50%;
+	z-index: 5;
 	transform: translate(15px, -50%);
 
 	&__link {
@@ -79,5 +84,9 @@
 		flex-shrink: 0;
 		width: 40px;
 		height: 40px;
+	}
+
+	@media (max-width: 992px) {
+		display: none;
 	}
 }

@@ -12,6 +12,7 @@
 	@include adaptive-font(26, 20);
 	margin: 0;
 	margin-bottom: 30px;
+	animation: fade-in-left 0.3s;
 }
 
 .quiz-question__answers {
@@ -19,6 +20,7 @@
 	flex-direction: column;
 	align-items: flex-start;
 	margin-bottom: 30px;
+	animation: fade-in-left 0.3s;
 }
 
 .quiz-question__label {

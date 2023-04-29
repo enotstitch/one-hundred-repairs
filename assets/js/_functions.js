@@ -7,4 +7,5 @@ import { swiper } from './functions/swiper-init';
 import { tabs } from '../components/tabs/tabs';
 import { spollers } from '../components/spollers/spollers';
 import { quiz } from '../components/quiz/quiz';
+import { showMoreRowTable } from './functions/showMoreRowTable';
 import { showMoreTags } from './functions/showMoreTags';

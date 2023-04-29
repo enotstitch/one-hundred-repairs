@@ -2,9 +2,11 @@
 	<h2 class="calc__title">Площадь помещения,&#160;м<sup>2</sup></h2>
 
 	<div class="calc__square calc-square">
-		<input class="calc-square__range" id="calcRange" type="range" />
+		<input class="calc-square__range" id="calcRange" type="range" value="36" min="1" max="400" />
 		<label class="calc-square__label" for="calcRange">
-			<output class="calc-square__value">32</output>
+			<button class="calc-square__button btn-reset" id="randgeSubtraction" type="button">-</button>
+			<input class="calc-square__value" type="text" value="36" />
+			<button class="calc-square__button btn-reset" id="randgeAdd" type="button">+</button>
 		</label>
 	</div>
 
@@ -12,26 +14,38 @@
 
 	<div class="calc__type calc-type">
 		<div class="calc-type__item">
-			<input class="calc-type__radio" id="draftRepair" name="radio" type="radio" />
-			<label class="calc-type__value" for="draftRepair">Черновой</label>
+			<label class="calc-type__value" for="draftRepair">
+				<input class="calc-type__radio-real" id="draftRepair" name="radio" type="radio" checked />
+				<span class="calc-type__radio-fake"></span>
+				<span class="task__name">Черновой</span>
+			</label>
 		</div>
 		<div class="calc-type__item">
-			<input class="calc-type__radio" id="capitalRepair" name="radio" type="radio" />
-			<label class="calc-type__value" for="capitalRepair">Капитальный</label>
+			<label class="calc-type__value" for="capitalRepair">
+				<input class="calc-type__radio-real" id="capitalRepair" name="radio" type="radio" />
+				<span class="calc-type__radio-fake"></span>
+				<span class="task__name">Капитальный</span>
+			</label>
 		</div>
 		<div class="calc-type__item">
-			<input class="calc-type__radio" id="cosmeticRepair" name="radio" type="radio" />
-			<label class="calc-type__value" for="cosmeticRepair">Косметический</label>
+			<label class="calc-type__value" for="cosmeticRepair">
+				<input class="calc-type__radio-real" id="cosmeticRepair" name="radio" type="radio" />
+				<span class="calc-type__radio-fake"></span>
+				<span class="task__name">Косметический</span>
+			</label>
 		</div>
 		<div class="calc-type__item">
-			<input class="calc-type__radio" id="eliteRepair" name="radio" type="radio" />
-			<label class="calc-type__value" for="eliteRepair">Элитный</label>
+			<label class="calc-type__value" for="eliteRepair">
+				<input class="calc-type__radio-real" id="eliteRepair" name="radio" type="radio" />
+				<span class="calc-type__radio-fake"></span>
+				<span class="task__name">Элитный</span>
+			</label>
 		</div>
 	</div>
 
 	<h2 class="calc__title">Стоимость ремонта:</h2>
 
-	<output class="calc__cost">158 000₽</output>
+	<output class="calc__cost">108 720&#8381;</output>
 
 	<div class="calc__inner">
 		<input class="calc__phone" id="calcPhone" type="text" placeholder="Ваш телефон" />

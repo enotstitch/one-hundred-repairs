@@ -1,8 +1,8 @@
 const tableBody = document.querySelectorAll('.table__body');
 
 tableBody.forEach((bodyItem) => {
-	const rowItemsLength = bodyItem.children.length - 1;
 	const rowItems = bodyItem.children;
+	const rowItemsLength = rowItems.length - 1;
 
 	if (rowItemsLength > 5) {
 		for (let i = 5; i < rowItemsLength; ++i) {

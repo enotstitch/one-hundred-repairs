@@ -88,6 +88,20 @@
 	color: var(--grey-color);
 }
 
+.btn {
+	border-radius: 15px;
+	padding: 10px 20px;
+	text-align: center;
+	color: var(--light-color);
+	background-color: var(--accent-color);
+	transition: filter 0.3s;
+	cursor: pointer;
+
+	&:hover {
+		filter: brightness(113%);
+	}
+}
+
 .link {
 	display: inline-block;
 	border: 2px solid transparent;
@@ -311,20 +325,6 @@
 
 		&--center {
 			text-align: center !important;
-		}
-	}
-
-	&__btn {
-		border-radius: 15px;
-		padding: 10px 20px;
-		text-align: center;
-		color: var(--light-color);
-		background-color: var(--accent-color);
-		transition: filter 0.3s;
-		cursor: pointer;
-
-		&:hover {
-			filter: brightness(113%);
 		}
 	}
 }

@@ -1,10 +1,23 @@
 .examples {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
 	&__cards {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: stretch;
 		justify-content: center;
 		gap: 30px;
+	}
+
+	&__btn {
+		display: none;
+		margin-top: 40px;
+
+		&--visible {
+			display: inline-block;
+		}
 	}
 }
 
@@ -106,6 +119,10 @@
 		&--blue {
 			color: var(--accent-color);
 		}
+	}
+
+	&--hidden {
+		display: none;
 	}
 }
 

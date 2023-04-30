@@ -52,23 +52,23 @@ window.onscroll = function () {
 const headerScroll = () => {
 	header.classList.toggle(
 		'header--scroll',
-		header.scrollTop > 10 || document.documentElement.scrollTop > 10,
+		header.scrollTop > 1 || document.documentElement.scrollTop > 1,
 	);
 
 	headerContainers.forEach((item) => {
 		item.classList.toggle(
 			'header__container--scroll',
-			item.scrollTop > 10 || document.documentElement.scrollTop > 10,
+			item.scrollTop > 1 || document.documentElement.scrollTop > 1,
 		);
 	});
 
 	logo.classList.toggle(
 		'logo__img--scroll',
-		logo.scrollTop > 10 || document.documentElement.scrollTop > 10,
+		logo.scrollTop > 1 || document.documentElement.scrollTop > 1,
 	);
 
 	headerMenu.classList.toggle(
 		'header__menu--scroll',
-		headerMenu.scrollTop > 10 || document.documentElement.scrollTop > 10,
+		headerMenu.scrollTop > 1 || document.documentElement.scrollTop > 1,
 	);
 };

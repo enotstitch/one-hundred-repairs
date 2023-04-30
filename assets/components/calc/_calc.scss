@@ -58,8 +58,7 @@
 		cursor: pointer;
 
 		&:hover {
-			border: 2px solid var(--light-color);
-			background-color: transparent;
+			filter: brightness(113%);
 		}
 	}
 }
@@ -136,6 +135,8 @@
 	&__value {
 		display: flex;
 		align-items: center;
+		width: fit-content;
+		cursor: pointer;
 		gap: 7px;
 	}
 

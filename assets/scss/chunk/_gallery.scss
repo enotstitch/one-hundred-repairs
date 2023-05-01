@@ -16,10 +16,18 @@
 		width: 100%;
 		min-height: 150px;
 		max-width: 300px;
+
+		&--hidden {
+			display: none;
+		}
 	}
 
 	&__link {
 		display: none;
 		margin-top: 40px;
+
+		&--visible {
+			display: inline-block;
+		}
 	}
 }

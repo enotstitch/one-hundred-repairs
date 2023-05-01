@@ -23,10 +23,15 @@
 	}
 
 	&__img {
+		flex-shrink: 0;
 		overflow: hidden;
 		border-radius: 15px;
-		height: auto;
+		width: 100%;
+		height: 300px;
 		max-width: 300px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
 
 		@media (max-width: 992px) {
 			display: none;

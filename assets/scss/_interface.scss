@@ -1,11 +1,6 @@
 .section {
 	padding: 75px 0;
 
-	&-hero {
-		padding-top: 300px;
-		background-image: url('@img/hero/hero-bg.jpg');
-	}
-
 	&-foreman {
 		background-image: url('@img/foreman/foreman-bg.jpg');
 		background-position: center;
@@ -18,6 +13,11 @@
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+	}
+
+	&-hero {
+		padding-top: 300px;
+		background-image: url('@img/hero/hero-bg.jpg');
 	}
 
 	&--decor {

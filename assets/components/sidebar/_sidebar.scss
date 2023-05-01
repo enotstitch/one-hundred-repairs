@@ -23,6 +23,10 @@
 
 		&:hover {
 			transform: translateX(-185px);
+
+			@media (max-width: 768px) {
+				transform: translateX(0);
+			}
 		}
 
 		&:last-child {

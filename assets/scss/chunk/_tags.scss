@@ -23,6 +23,7 @@
 	position: relative;
 	border-radius: 15px;
 	padding: 5px 10px 5px 20px;
+	color: var(--light-color);
 	background-color: var(--accent-color);
 
 	&::before {
@@ -35,9 +36,5 @@
 		height: 6px;
 		background-color: var(--light-color);
 		transform: translateY(-50%);
-	}
-
-	&__name {
-		color: var(--light-color);
 	}
 }

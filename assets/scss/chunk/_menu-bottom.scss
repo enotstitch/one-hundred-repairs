@@ -6,11 +6,22 @@
 	z-index: 5;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 	border-radius: 15px 15px 0 0;
-	padding: 15px 0;
+	padding: 15px 50px;
 	background-color: var(--dark-blue-color);
-	gap: 25px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		right: 50%;
+		bottom: 50%;
+		border-radius: 10px;
+		width: 2px;
+		height: 40%;
+		background-color: var(--light-color);
+		transform: translate(50%, 50%);
+	}
 
 	&__link {
 		color: var(--light-color);

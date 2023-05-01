@@ -9,12 +9,15 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		overflow: hidden;
-		margin-bottom: 20px;
 		gap: 7px;
-		max-height: 35px;
+	}
 
-		&.tags-visible {
-			max-height: max-content;
+	&__btn {
+		display: none;
+		margin-top: 40px;
+
+		&--visible {
+			display: inline-block;
 		}
 	}
 }
@@ -36,5 +39,9 @@
 		height: 6px;
 		background-color: var(--light-color);
 		transform: translateY(-50%);
+	}
+
+	&--hidden {
+		display: none;
 	}
 }

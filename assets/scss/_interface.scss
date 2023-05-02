@@ -290,7 +290,6 @@
 			border-bottom: 1px solid #dfdfdf;
 
 			&:last-child {
-				display: none;
 				border: none;
 			}
 		}
@@ -344,5 +343,13 @@
 	&__icon {
 		width: 60px;
 		height: 20px;
+	}
+}
+
+.row {
+	display: table-row;
+
+	&--hidden {
+		display: none;
 	}
 }

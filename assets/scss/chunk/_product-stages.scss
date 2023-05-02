@@ -80,9 +80,11 @@
 	&__photos {
 		display: flex;
 		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
 		width: 48%;
-		gap: 30px;
 		height: min-content;
+		gap: 30px;
 
 		@media (max-width: 992px) {
 			width: 100%;

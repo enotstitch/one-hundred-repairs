@@ -49,5 +49,5 @@ const showMoreCards = (parentClass, childrenClass, btnClass) => {
 };
 
 showMoreCards('examples__cards', 'examples-card', 'examples__btn');
-showMoreCards('gallery__wrap', 'gallery__item', 'gallery__link');
+showMoreCards('gallery__wrap', 'gallery__item', 'gallery__btn');
 showMoreCards('tags__wrap', 'tag', 'tags__btn');

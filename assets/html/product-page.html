@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link type="image/svg" href="favicon/favicon.svg" rel="shortcut icon" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<meta name="theme-color" content="#111111" />
-		<title>Ремонт квартир цены от 1499 рублей м² в Ярославле. Дизайн под ключ</title>
-		<link href="css/styles.min.css" rel="stylesheet" />
-	</head>
-	<body>
-		<div class="site-container">
-			@include('../components/header/header.html')
-			<main class="main">
-				@include('chunk/product-hero.html') @include('chunk/product-repair.html')
-				@include('chunk/product-stages.html') @include('chunk/price-impact.html')
-				@include('chunk/separate-cost.html') @include('chunk/tags.html')
-			</main>
-			@include('chunk/footer.html') @include('../components/sidebar/sidebar.html')
-			@include('../components/sidebar/sidebar-socials.html') @include('chunk/menu-bottom.html')
-			@include('../components/modal/modal-quiz.html')
-			@include('../components/modal/modal-application.html')
-			@include('../components/modal/modal-question.html')
-			@include('../components/modal/modal-installment.html')
-			@include('../components/modal/modal-stock.html')
-		</div>
-		<script src="js/scripts.min.js"></script>
-	</body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link type="image/svg" href="favicon/favicon.svg" rel="shortcut icon" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="theme-color" content="#111111" />
+	<title>Ремонт квартир цены от 1499 рублей м² в Ярославле. Дизайн под ключ</title>
+	<link href="css/styles.min.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="site-container">
+		@include('../components/header/header.html')
+		<main class="main">
+			@include('chunk/product-hero.html')
+			@include('chunk/product-repair.html')
+			@include('chunk/cost.html')
+			@include('chunk/product-stages.html')
+			@include('chunk/price-impact.html')
+			@include('chunk/separate-cost.html')
+			@include('chunk/advantage.html')
+			@include('chunk/foreman.html')
+			@include('chunk/stock.html')
+			@include('chunk/gallery.html')
+			@include('chunk/experts.html')
+			@include('chunk/numbers.html')
+			@include('chunk/questions.html')
+			@include('chunk/contacts.html')
+			@include('chunk/tags.html')
+		</main>
+		@include('chunk/footer.html') @include('../components/sidebar/sidebar.html')
+		@include('../components/sidebar/sidebar-socials.html') @include('chunk/menu-bottom.html')
+		@include('../components/modal/modal-quiz.html')
+		@include('../components/modal/modal-application.html')
+		@include('../components/modal/modal-question.html')
+		@include('../components/modal/modal-installment.html')
+		@include('../components/modal/modal-stock.html')
+	</div>
+	<script src="js/scripts.min.js"></script>
+</body>
+
 </html>

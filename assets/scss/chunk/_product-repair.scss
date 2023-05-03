@@ -13,8 +13,13 @@
 	&__img {
 		overflow: hidden;
 		border-radius: 15px;
+		width: 100%;
 		height: min-content;
+		height: 300px;
 		max-width: 460px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 
 	&__info {
@@ -43,7 +48,7 @@
 	}
 
 	&__cost {
-		@include adaptive-font(23, 18);
+		@include adaptive-font(23, 19);
 		display: inline-block;
 		align-self: center;
 
@@ -52,7 +57,7 @@
 		}
 
 		@media (max-width: 992px) {
-			margin-bottom: 10px;
+			margin-bottom: 20px;
 		}
 	}
 }

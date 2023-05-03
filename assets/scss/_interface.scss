@@ -1,3 +1,22 @@
+.logo {
+	display: block;
+
+	&__img {
+		width: 200px;
+		height: auto;
+		fill: var(--accent-color);
+		transition: width 0.25s;
+
+		&--scroll {
+			width: 140px;
+		}
+
+		@media (max-width: 480px) {
+			width: 150px;
+		}
+	}
+}
+
 .section {
 	padding: 75px 0;
 
@@ -158,6 +177,7 @@
 
 		&--blue {
 			@include adaptive-font(19, 18);
+			margin-bottom: 0;
 			color: var(--accent-color);
 		}
 	}
@@ -290,7 +310,6 @@
 			border-bottom: 1px solid #dfdfdf;
 
 			&:last-child {
-				display: none;
 				border: none;
 			}
 		}
@@ -345,4 +364,23 @@
 		width: 60px;
 		height: 20px;
 	}
+}
+
+.row-hidden {
+	display: none;
+}
+
+.iframe {
+	border: none;
+	width: 100%;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	overflow: hidden;
+	border: 0 !important;
+	padding: 0 !important;
+	width: 1px !important;
+	height: 1px !important;
+	clip: rect(1px, 1px, 1px, 1px);
 }

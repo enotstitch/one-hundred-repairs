@@ -1,4 +1,5 @@
 import htmlmin from 'gulp-htmlmin';
+import typograf from 'gulp-typograf';
 
 export const html = () => {
 	return app.gulp
@@ -15,6 +16,11 @@ export const html = () => {
 			app.plugins.fileInclude({
 				prefix: '@',
 				basepath: '@file',
+			}),
+		)
+		.pipe(
+			typograf({
+				locale: ['ru', 'en-US'],
 			}),
 		)
 		.pipe(app.plugins.replace(/@img\//g, 'img/'))

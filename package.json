@@ -56,6 +56,7 @@
 		"gulp-sass": "^5.1.0",
 		"gulp-size": "^4.0.1",
 		"gulp-svg-sprite": "^1.5.0",
+		"gulp-typograf": "^4.1.0",
 		"gulp-util": "^3.0.8",
 		"gulp-webp": "^4.0.1",
 		"gulp-zip": "^5.1.0",

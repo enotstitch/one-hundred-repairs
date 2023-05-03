@@ -3,11 +3,13 @@
 
 	<div class="calc__square calc-square">
 		<input class="calc-square__range" id="calcRange" type="range" value="36" min="1" max="400" />
-		<label class="calc-square__label" for="calcRange">
+		<label for="calcRange"></label>
+		<label for="calcValue"></label>
+		<div class="calc-square__inner">
 			<button class="calc-square__button btn-reset" id="randgeSubtraction" type="button">-</button>
-			<input class="calc-square__value" type="text" value="36" />
+			<input class="calc-square__value" id="calcValue" type="text" value="36" />
 			<button class="calc-square__button btn-reset" id="randgeAdd" type="button">+</button>
-		</label>
+		</div>
 	</div>
 
 	<h2 class="calc__title">Тип ремонта</h2>
@@ -17,28 +19,28 @@
 			<label class="calc-type__value" for="draftRepair">
 				<input class="calc-type__radio-real" id="draftRepair" name="radio" type="radio" checked />
 				<span class="calc-type__radio-fake"></span>
-				<span class="task__name">Черновой</span>
+				<span class="calc-type__text">Черновой</span>
 			</label>
 		</div>
 		<div class="calc-type__item">
 			<label class="calc-type__value" for="capitalRepair">
 				<input class="calc-type__radio-real" id="capitalRepair" name="radio" type="radio" />
 				<span class="calc-type__radio-fake"></span>
-				<span class="task__name">Капитальный</span>
+				<span class="calc-type__text">Капитальный</span>
 			</label>
 		</div>
 		<div class="calc-type__item">
 			<label class="calc-type__value" for="cosmeticRepair">
 				<input class="calc-type__radio-real" id="cosmeticRepair" name="radio" type="radio" />
 				<span class="calc-type__radio-fake"></span>
-				<span class="task__name">Косметический</span>
+				<span class="calc-type__text">Косметический</span>
 			</label>
 		</div>
 		<div class="calc-type__item">
 			<label class="calc-type__value" for="eliteRepair">
 				<input class="calc-type__radio-real" id="eliteRepair" name="radio" type="radio" />
 				<span class="calc-type__radio-fake"></span>
-				<span class="task__name">Элитный</span>
+				<span class="calc-type__text">Элитный</span>
 			</label>
 		</div>
 	</div>

@@ -72,6 +72,7 @@ class Quiz {
 			}
 
 			if (e.target == document.querySelector('[data-send]')) {
+				this.addToSend();
 				this.send();
 			}
 		});
@@ -112,6 +113,8 @@ class Quiz {
 		elements.forEach((el) => {
 			switch (el.type) {
 				case 'text':
+					el.value ? (isValid = true) : el.closest('.quiz-question__label').classList.add('error');
+				case 'tel':
 					el.value ? (isValid = true) : el.closest('.quiz-question__label').classList.add('error');
 				case 'checkbox':
 					el.checked

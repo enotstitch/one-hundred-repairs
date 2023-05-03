@@ -1,5 +1,5 @@
 // Меню бургер
-const menuBurger = document.querySelector('.menu__burger');
+const menuBurger = document.querySelector('.burger');
 const menuBody = document.querySelector('.menu__body');
 if (menuBurger) {
 	menuBurger.addEventListener('click', function (e) {

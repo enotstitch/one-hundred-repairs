@@ -1,8 +1,14 @@
 .video-review {
 	&__wrap {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
 		gap: 85px;
+	}
+
+	&__item {
+		width: 100%;
+		max-width: 560px;
 	}
 }

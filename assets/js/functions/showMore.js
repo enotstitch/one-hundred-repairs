@@ -61,9 +61,9 @@ const showMoreRowTable = () => {
 
 		if (rowItemsLength > 5) {
 			for (let i = 5; i < rowItemsLength; ++i) {
-				rowItems[i].classList.add('row--hidden');
+				rowItems[i].classList.add('row-hidden');
 			}
-			tableBtn.classList.remove('row--hidden');
+			tableBtn.classList.remove('row-hidden');
 		}
 
 		bodyItem.addEventListener('click', (e) => {
@@ -72,12 +72,12 @@ const showMoreRowTable = () => {
 
 			if (isTableBtn && target.textContent === TEXT_CONTENT_BTN.SHOW) {
 				for (let i = 5; i < rowItemsLength; ++i) {
-					rowItems[i].classList.remove('row--hidden');
+					rowItems[i].classList.remove('row-hidden');
 				}
 				target.textContent = TEXT_CONTENT_BTN.HIDE;
 			} else if (isTableBtn && target.textContent === TEXT_CONTENT_BTN.HIDE) {
 				for (let i = 5; i < rowItemsLength; ++i) {
-					rowItems[i].classList.add('row--hidden');
+					rowItems[i].classList.add('row-hidden');
 				}
 				target.textContent = TEXT_CONTENT_BTN.SHOW;
 			}
